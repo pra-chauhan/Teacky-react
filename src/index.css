@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 96%; /* #F8F5F2 */
+    --foreground: 25 20% 25%; /* #4D4038 */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 25 20% 25%; /* #4D4038 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 25%;
+
+    --primary: 20 30% 40%; /* #7C5C4D */
+    --primary-foreground: 30 33% 96%; /* #F8F5F2 */
+
+    --secondary: 30 15% 62%; /* #A1887F */
+    --secondary-foreground: 30 33% 96%; /* #F8F5F2 */
+
+    --muted: 30 20% 90%; /* #EDEAE6 */
+    --muted-foreground: 30 10% 55%; /* #9A8C85 */
+
+    --accent: 30 20% 90%; /* #EDEAE6 */
+    --accent-foreground: 20 30% 40%; /* #7C5C4D */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 20% 85%; /* #E0D9D3 */
+    --input: 30 20% 85%;
+    --ring: 20 30% 40%;
+
+    --radius: 0.5rem;
+    /* ... keep existing sidebar variables if not overridden by the above ... */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* For now, we are not implementing dark mode, but keeping the structure */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... (keep existing dark mode variables or adapt them later) ... */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    /* ... keep existing dark mode sidebar variables ... */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
